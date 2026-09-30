@@ -2,7 +2,6 @@
 const input = document.querySelector("#input");
 const btn = document.querySelector(".btn");
 const main = document.querySelector(".main");
-const wrap = document.querySelector(".wrap");
 
 btn.addEventListener("click", () => {
     if (input.value) {
@@ -18,17 +17,19 @@ window.addEventListener("keypress", (e) => {
 })
 
 async function gethovo(itom) {
-    const res = await fetch(`https://api.weatherapi.com/v1/current.json?key=0101d8e61bc04c7fb9580547251103&q=${itom}&aqi=no
-`)
+    try {
+        const res = await fetch(`https://api.weatherapi.com/v1/current.json?   key=0101d8e61bc04c7fb9580547251103&q=${itom}&aqi=no
+     `);
+    
 
-    if (res.ok === true && res.status === 200) {
-        const data = await res.json();
+        if (res.ok === true && res.status === 200) {
+            const data = await res.json();
 
-        main.innerHTML = `<h1 class="text_h1">kutulmoqda ... </h1>`;
+            main.innerHTML = `<h1 class="text_h1">kutulmoqda ... </h1>`;
 
-        setTimeout(() => {
+            setTimeout(() => {
              
-             main.innerHTML = `
+            main.innerHTML = `
             
             <div class="name_time">
               <div>
@@ -59,13 +60,17 @@ async function gethovo(itom) {
             </div>
 
             `;
-            main.classList="main2"
+                main.classList = "main2"
 
-        }, 1000);
+            }, 1000);
 
-        
-        console.log(data);
-    } else {
-        alert("xatolik yuz berd")
-    }
+            console.log(data);
+            
+        } else {
+            alert("xatolik yuz berd !")
+        }
+
+    } catch (error){
+        console.log(error);
+    };
 }
