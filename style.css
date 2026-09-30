@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(90deg ,rgb(1, 1, 105),rgb(30, 52, 176),rgb(90, 162, 221));
+}
+.wrap{
+    width: 400px;
+    /* height: 500px; */
+    background-color: white;
+    border-radius: 20px;
+    padding-block: 30px;
+    padding-inline: 10px;
+
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+}
+
+.input_btn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-inline: auto;
+}
+
+#input{
+    width: 200px;
+    height: 50px;
+    border: none;
+    padding: 10px 10px;
+    outline: none;
+
+    font-size: 18px;
+}
+
+.btn{
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius:50%;
+    padding: auto;
+    background-color: rgb(247, 241, 241);
+}
+.btn:hover{
+    background-color: rgb(189, 249, 229);
+}
+
+/* main */
+.main{
+    width: 300px;
+    margin-inline: auto;
+    /* margin-top: 20px; */
+}
+.main2{
+       
+    width: 300px;
+    margin-inline: auto;
+    margin-top: 20px;
+}
+.text_h1{
+    font-size: 22px;
+    font-weight: 200;
+    font-family: "Roboto", sans-serif;
+    margin-inline: auto;
+    text-align: center;
+    margin-block: 30px;
+}
+.name_time{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.temp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.temp img{
+    width: 180px;
+    height: 150px;
+    margin-inline: auto;
+}
+.temp h2{
+    margin-inline: auto;
+    font-size: 39px;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+}
+.temp p{
+    margin-inline: auto;
+    font-family: "Roboto", sans-serif;
+}
